@@ -6,7 +6,6 @@
             ux_char, 
             ux_string,
             ux_uca,
- 
             ux_html]},
   {registered, []},
   {mod, {'ux_app', []}},
