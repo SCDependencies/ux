@@ -36,8 +36,8 @@ init([]) ->
 
     % Can add functions to a module on the fly
     MetaWorker = {ux_unidata_meta, 
-        {metamodule, start_link, [ux_unidata_meta]},
-        permanent, 10000, worker, [metamodule]},
+        {ux_meta, start_link, [ux_unidata_meta]},
+        permanent, 10000, worker, [ux_meta]},
 
     Strategy = {one_for_one, 10, 10},
     {ok, {Strategy, [StoreSup, FileListWorker, DefaultUnidataWorker, MetaWorker]}}.

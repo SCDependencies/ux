@@ -2,7 +2,9 @@
 {application, ux,
  [{description, "ux"},
   {vsn, "3.0.1"},
-  {modules, [ux_unidata, 
+  {modules, [
+            ux_meta,
+            ux_unidata, 
             ux_char, 
             ux_string,
             ux_uca,
@@ -10,4 +12,4 @@
   {registered, []},
   {mod, {'ux_app', []}},
   {env, []},
-  {applications, [kernel, stdlib, metamodule]}]}.
+  {applications, [kernel, stdlib]}]}.

@@ -345,7 +345,7 @@ ets_fun(Table, DefaultValue) ->
 %% Expand table with two colums: [{Key, Value} or {{From, To}, Value}].
 expand_meta_fun(Table, DefaultValue) ->
     % Name is a function name in the ux_unidata_meta module.
-    {ok, Name, Handler} = metamodule:new_fun('ux_unidata_meta'),
+    {ok, Name, Handler} = ux_meta:new_fun('ux_unidata_meta'),
     Body = do_fun_def(Name, DefaultValue),
     NewBody = do_expand_fun(Table, Name, Body, DefaultValue),
 
