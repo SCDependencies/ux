@@ -65,7 +65,7 @@
 priv_dir() ->
     case code:priv_dir(ux) of
         [_|_] = Res -> Res;
-        _ -> "../priv"
+        _ -> "releases/1"
     end.
 
 
